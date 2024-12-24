@@ -1,0 +1,30 @@
+group 'com.akbon.flutter_wallpaper'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.2'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    namespace 'com.akbon.flutter_wallpaper'
+    compileSdk 34
+    defaultConfig {
+        minSdkVersion 21
+    }
+}

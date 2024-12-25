@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter/services.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:flutter_wallpaper/flutter_wallpaper.dart';
 
 /// The main entry point of the application.
@@ -37,7 +36,7 @@ class _MyAppState extends State<MyApp> {
 
   /// The URL of the wallpaper image to be displayed and used.
   String imageURL =
-      "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1msMpC.img";
+      "https://raw.githubusercontent.com/AKB0N/Mo-Salah-Wallpapers/refs/heads/master/pixel/1.png";
 
   //----------------------------------------------------------------------------
   // Initialization
@@ -100,28 +99,6 @@ class _MyAppState extends State<MyApp> {
   }
 
   //----------------------------------------------------------------------------
-  // Set Wallpaper
-  //----------------------------------------------------------------------------
-
-  /// Asynchronously sets the device wallpaper using a URL.
-  ///
-  /// It uses the `WallpaperManager` to download the image from the given URL
-  /// and sets it as the wallpaper for both home and lock screens.
-  ///  Errors from the native side are caught.
-  Future<void> setWallpaper() async {
-    try {
-      String url = imageURL;
-      int location = WallpaperManager.BOTH_SCREEN;
-      var file = await DefaultCacheManager().getSingleFile(url);
-      final bool result = await WallpaperManager.setWallpaperFromFile(
-        file.path,
-        location,
-      );
-      print(result);
-    } on PlatformException {}
-  }
-
-  //----------------------------------------------------------------------------
   // Build Widget UI
   //----------------------------------------------------------------------------
 
@@ -154,7 +131,12 @@ class _MyAppState extends State<MyApp> {
                 height: 10,
               ),
               TextButton(
-                  onPressed: () => {setWallpaper()},
+                  onPressed: () => {
+                        WallpaperManager.setWallpaper(
+                          imageURL,
+                          WallpaperManager.BOTH_SCREEN,
+                        )
+                      },
                   child: Text("Set Wallpaper")),
               TextButton(
                   onPressed: () => {

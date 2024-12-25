@@ -61,6 +61,26 @@ class WallpaperManager {
   }
 
   //----------------------------------------------------------------------------
+  // Set Wallpaper
+  //----------------------------------------------------------------------------
+
+  /// Asynchronously sets the device wallpaper using a URL.
+  ///
+  /// It uses the `WallpaperManager` to download the image from the given URL
+  /// and sets it as the wallpaper for both home and lock screens.
+  ///  Errors from the native side are caught.
+  static Future<void> setWallpaper(imageURL, location) async {
+    try {
+      var file = await DefaultCacheManager().getSingleFile(imageURL);
+      final bool result = await WallpaperManager.setWallpaperFromFile(
+        file.path,
+        location,
+      );
+      print(result);
+    } on PlatformException {}
+  }
+
+  //----------------------------------------------------------------------------
   // Download Wallpaper
   //----------------------------------------------------------------------------
 

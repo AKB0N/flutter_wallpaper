@@ -1,184 +1,178 @@
-# Flutter Wallpaper Plugin
+# flutter_wallpaper
 
-A Flutter plugin for managing device wallpapers on Android and iOS. This plugin allows you to set, clear, download, and retrieve information about wallpapers programmatically.
+A Flutter plugin for managing device wallpapers.
+
+[![pub package](https://img.shields.io/pub/v/flutter_wallpaper.svg)](https://pub.dev/packages/flutter_wallpaper)
+[![License: BSD](https://img.shields.io/badge/License-BSD-yellow.svg)](https://opensource.org/license/bsd-3-clause)
+
+This plugin provides a simple and efficient way to set, download, clear, and retrieve information about device wallpapers in your Flutter applications. It supports setting wallpapers for the home screen, lock screen, or both.
 
 ## Features
-
--   **Set Wallpaper:** Set a wallpaper from a local file to the home screen, lock screen, or both.
--   **Clear Wallpaper:** Remove the current wallpaper.
--   **Download Wallpaper:** Download an image from a URL and save it to the gallery.
--   **Get Wallpaper Dimensions:** Retrieve the height and width of a wallpaper image from a URL.
--   **Get Wallpaper Size:** Retrieve the size of a wallpaper image from a URL as a human-readable string (e.g., "1.2 MB").
--   **Platform Version:** Get the device's platform version.
+e path.
+-   **Set Wallpaper from URL:** Download an image from a URL and set i
+-   **Set Wallpaper from File:** Set a wallpaper from a local filt as wallpaper.
+-   **Download Wallpaper:** Download an image from a URL and save it to the device's gallery.
+-   **Clear Wallpaper:** Remove the current device wallpaper.
+-   **Get Wallpaper Dimensions:** Retrieve the height and width of an image from a URL.
+-   **Get Wallpaper Size:** Get the file size of an image from a URL.
+-   **Supports Home, Lock and Both Screens**: Allows setting the wallpaper to Home screen, Lock screen or Both.
 
 ## Installation
 
-Add the plugin to your `pubspec.yaml` file:
+Add `flutter_wallpaper` as a dependency in your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flutter_wallpaper:
-    git:
-      url: https://github.com/<your_github_username>/flutter_wallpaper.git # Replace with your repository URL
-      ref: main # Replace with your branch
+  flutter:
+    sdk: flutter
+  flutter_wallpaper: ^0.0.1
 ```
 
-Then, run flutter pub get in your terminal.
+Then, run `flutter pub get` in your terminal.
 
-* Usage
-* Setting the Wallpaper
+## Usage
+
+Here's how to use the `WallpaperManager` class in your Flutter project:
+
+### Initialization
+
+There is no need to do initialization.
+
+### Setting a Wallpaper
+
+#### From a URL
 
 ```dart
 import 'package:flutter_wallpaper/flutter_wallpaper.dart';
 
-void main() async {
-   WidgetsFlutterBinding.ensureInitialized();
-  String imageUrl = "https://example.com/wallpaper.jpg";
-  File file = await DefaultCacheManager().getSingleFile(imageUrl);
-  // Set wallpaper to home screen
-  bool success = await WallpaperManager.setWallpaperFromFile(file.path, WallpaperManager.HOME_SCREEN);
-  print("Set wallpaper to home screen: $success");
+void setWallpaperFromUrl() async {
+  String imageUrl = 'https://raw.githubusercontent.com/AKB0N/Mo-Salah-Wallpapers/refs/heads/master/pixel/1.png'; // Replace with your image URL
+  int wallpaperLocation = WallpaperManager.BOTH_SCREEN; // Use HOME_SCREEN, LOCK_SCREEN, or BOTH_SCREEN
 
-  // Set wallpaper to lock screen
-  success = await WallpaperManager.setWallpaperFromFile(file.path, WallpaperManager.LOCK_SCREEN);
-    print("Set wallpaper to lock screen: $success");
-
-  // Set wallpaper to both screens
-   success = await WallpaperManager.setWallpaperFromFile(file.path, WallpaperManager.BOTH_SCREEN);
-  print("Set wallpaper to both screen: $success");
+  await WallpaperManager.setWallpaper(imageUrl, wallpaperLocation);
 }
 ```
 
-* Clearing the Wallpaper
+### Downloading a Wallpaper
 
 ```dart
 import 'package:flutter_wallpaper/flutter_wallpaper.dart';
 
-void main() async {
-    WidgetsFlutterBinding.ensureInitialized();
+void downloadWallpaper() async {
+  String imageUrl = 'https://raw.githubusercontent.com/AKB0N/Mo-Salah-Wallpapers/refs/heads/master/pixel/1.png'; // Replace with your image URL
+  String imageName = 'my_wallpaper.jpg'; // Desired file name
+  int quality = 100; // Image quality (0-100)
+
+  await WallpaperManager.downloadWallpaper(imageUrl, imageName, quality);
+}
+```
+
+### Clearing the Wallpaper
+
+```dart
+import 'package:flutter_wallpaper/flutter_wallpaper.dart';
+
+void clearWallpaper() async {
   bool success = await WallpaperManager.clearWallpaper();
-  print("Wallpaper cleared: $success");
+
+  if(success) {
+    print('Wallpaper cleared successfully!');
+  } else {
+    print('Failed to clear wallpaper.');
+  }
 }
 ```
 
-* Downloading a Wallpaper
+### Getting Wallpaper Information
+
+#### Get Height
 
 ```dart
 import 'package:flutter_wallpaper/flutter_wallpaper.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  String imageUrl = "https://example.com/wallpaper.jpg";
-  await WallpaperManager.downloadWallpaper(imageUrl, "my_wallpaper", 100);
-  print("Wallpaper downloaded and saved to gallery.");
-}
-```
-
-* Getting Wallpaper Information
-
-```dart
-import 'package:flutter_wallpaper/flutter_wallpaper.dart';
-
-void main() async {
-   WidgetsFlutterBinding.ensureInitialized();
-  String imageUrl = "https://example.com/wallpaper.jpg";
-
-  String? size = await WallpaperManager.getWallpaperSize(imageUrl);
-  print("Wallpaper size: $size");
-
+void getWallpaperHeight() async {
+  String imageUrl = 'https://raw.githubusercontent.com/AKB0N/Mo-Salah-Wallpapers/refs/heads/master/pixel/1.png'; // Replace with your image URL
   int? height = await WallpaperManager.getWallpaperHeight(imageUrl);
-  print("Wallpaper height: $height");
 
-    int? width = await WallpaperManager.getWallpaperWidth(imageUrl);
-  print("Wallpaper width: $width");
+  if(height != null) {
+    print('Wallpaper height: $height');
+  } else {
+    print('Failed to get wallpaper height.');
+  }
 }
 ```
 
-Getting Platform Version
+#### Get Width
 
 ```dart
 import 'package:flutter_wallpaper/flutter_wallpaper.dart';
 
-void main() async {
-   WidgetsFlutterBinding.ensureInitialized();
-  String? version = await WallpaperManager.platformVersion;
-  print("Platform version: $version");
+void getWallpaperWidth() async {
+  String imageUrl = 'https://raw.githubusercontent.com/AKB0N/Mo-Salah-Wallpapers/refs/heads/master/pixel/1.png'; // Replace with your image URL
+  int? width = await WallpaperManager.getWallpaperWidth(imageUrl);
+
+  if(width != null) {
+     print('Wallpaper width: $width');
+  } else {
+     print('Failed to get wallpaper width.');
+  }
 }
 ```
 
-* Constants
-- WallpaperManager.HOME_SCREEN: Constant representing the home screen wallpaper location.
-- WallpaperManager.LOCK_SCREEN: Constant representing the lock screen wallpaper location.
-- WallpaperManager.BOTH_SCREEN: Constant representing both home and lock screen wallpaper locations.
+#### Get Size
 
-* API Reference
-WallpaperManager Class
-static Future<String?> get platformVersion
+```dart
+import 'package:flutter_wallpaper/flutter_wallpaper.dart';
 
-- Retrieves the platform version of the device.
-- Returns: A String representing the platform version, or null if it cannot be retrieved.
+void getWallpaperSize() async {
+  String imageUrl = 'https://raw.githubusercontent.com/AKB0N/Mo-Salah-Wallpapers/refs/heads/master/pixel/1.png'; // Replace with your image URL
+  String? size = await WallpaperManager.getWallpaperSize(imageUrl);
 
-static Future<bool> setWallpaperFromFile(String filePath, int wallpaperLocation)
+  if (size != null) {
+    print('Wallpaper size: $size');
+  } else {
+    print('Failed to get wallpaper size.');
+  }
+}
+```
 
-- Sets the device wallpaper using the provided file path and location.
-- filePath: The path to the image file.
-- wallpaperLocation: Where to set the wallpaper (e.g., HOME_SCREEN, LOCK_SCREEN, BOTH_SCREEN).
-- Returns: true if successful, false otherwise.
+## Constants
 
-static Future<void> downloadWallpaper(String wallpaperUrl, String wallpaperName, int quality)
+The following constants are available within the `WallpaperManager` class:
 
-- Downloads a wallpaper image from the given URL and saves it to the device's gallery.
-- wallpaperUrl: The URL of the wallpaper image.
-- wallpaperName: The desired file name for the saved image.
-- quality: The quality of the saved image (0-100).
+-   `WallpaperManager.HOME_SCREEN`: Represents the home screen wallpaper location.
+-   `WallpaperManager.LOCK_SCREEN`: Represents the lock screen wallpaper location.
+-   `WallpaperManager.BOTH_SCREEN`: Represents both the home and lock screen wallpaper locations.
 
-static Future<bool> clearWallpaper()
+## Permissions
 
-- Clears the current wallpaper on the device.
-- Returns: true if successful, false otherwise.
+This plugin relies on the following permissions:
 
-static Future<int?> getWallpaperHeight(String url)
+-   **Android:**
+  -   `android.permission.SET_WALLPAPER` (for setting wallpapers)
+  -   `android.permission.READ_EXTERNAL_STORAGE` (for accessing local files)
+  -   `android.permission.WRITE_EXTERNAL_STORAGE` (for downloading images)
+-   **iOS:**
+  -   This plugin works on iOS 16+, but it's restricted to specific use cases, check the iOS Platform notes.
+  -   Permission for saving an image to gallery is required: add this to `ios/Runner/Info.plist`
+       ```xml
+       <key>NSPhotoLibraryAddUsageDescription</key>
+       <string>This app requires photo library access to save the wallpaper.</string>
+       ```
 
-- Retrieves the height of an image from the given URL.
-- url: The URL of the image.
-- Returns: The height of the image or null if an error occurs.
+## Platform Notes
 
-static Future<int?> getWallpaperWidth(String url)
+-   **Android:** This plugin works seamlessly on all supported Android versions.
+-   **iOS:**
+  -   **Setting Wallpaper:** Setting a wallpaper programmatically on iOS is limited due to Apple's security policies. This plugin works on iOS 16+, and it may not work in all scenarios, and will be able to change only the lockscreen.
+  -   **Clearing Wallpaper:** Clearing the wallpaper is currently not supported on iOS.
+  -   **Saving to Gallery**: Saving image to photo gallery is supported by the package `image_gallery_saver`.
 
-- Retrieves the width of an image from the given URL.
-- url: The URL of the image.
-- Returns: The width of the image or null if an error occurs.
+## Contributing
 
-static Future<String?> getWallpaperSize(String url)
+Contributions are welcome! If you find a bug or have a feature request, please open an issue on GitHub. Feel free to submit pull requests with improvements or fixes.
 
-- Retrieves the size of an image from the given URL as a human-readable string.
-- url: The URL of the image.
-- Returns: A formatted string representing the size of the image (e.g., "1.2 MB") or null if an error occurs.
+## Developer
+By [Ibrahim Fathelbab](https://www.akbon.dev/ "Ibrahim Fathelbab")
 
-* Permissions
-* Android
-
-- The plugin requires the following permissions:
-    - android.permission.SET_WALLPAPER
-    - android.permission.READ_EXTERNAL_STORAGE.
-- These permissions should be automatically added during the plugin installation.
-
-* iOS
-- There are no extra permissions needed in iOS
-
-* Issues and Contributions
-If you encounter any issues or have suggestions, please feel free to open an issue or submit a pull request on the GitHub repository.
-
-* License
-This plugin is licensed under the MIT License.
-
-**Changes Made:**
-
--   **Removed "iOS Only" Notes:** All mentions of "iOS Only" for the `downloadWallpaper` method have been removed.
--   **Clear Functionality:** The description and feature lists now state that the plugin supports downloading wallpapers on both platforms.
-
-**Important Considerations:**
-
-*   **Testing:** It's essential to thoroughly test the download functionality on various Android devices and versions to ensure its stability.
-*   **Error Handling:** Make sure your plugin has robust error handling in place to catch any exceptions or issues that might arise during download or saving operations.
-
+&copy; All rights reserved.

@@ -163,9 +163,6 @@ class _MyAppState extends State<MyApp> {
               SizedBox(
                 height: 10,
               ),
-              TextButton(
-                  onPressed: () => {(WallpaperManager.clearWallpaper())},
-                  child: Text("Clear Wallpaper"))
             ],
           ),
         )),

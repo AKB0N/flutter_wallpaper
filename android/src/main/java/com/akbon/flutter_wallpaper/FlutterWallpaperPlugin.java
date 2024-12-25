@@ -58,15 +58,6 @@ public class FlutterWallpaperPlugin implements FlutterPlugin, MethodCallHandler 
         else if(call.method.equals("setWallpaperFromFile")){
             result.success(setWallpaperFromFile((String) call.argument("filePath"), (int) call.argument("wallpaperLocation")));
         }
-        else if(call.method.equals("clearWallpaper")){
-            result.success(clearWallpaper());
-        }
-        else if(call.method.equals("getDesiredMinimumHeight")){
-            result.success(getDesiredMinimumHeight());
-        }
-        else if(call.method.equals("getDesiredMinimumWidth")){
-            result.success(getDesiredMinimumWidth());
-        }
         else {
             result.notImplemented();
         }
@@ -153,45 +144,4 @@ public class FlutterWallpaperPlugin implements FlutterPlugin, MethodCallHandler 
         return scaledBitmap;
     }
 
-    /**
-     * Clears the device wallpaper.
-     *
-     * This method calls the system's `WallpaperManager` to clear the current wallpaper.
-     *
-     * @return A boolean, `true` if successful, `false` otherwise
-     */
-    @SuppressLint("MissingPermission")
-    private boolean clearWallpaper() {
-        Boolean result = false;
-        WallpaperManager wm = WallpaperManager.getInstance(context);
-        try {
-            wm.clear();
-            result = true;
-        } catch (IOException e) {
-            // Log exception
-        }
-        return result;
-    }
-
-    /**
-     * Gets the desired minimum height for the device wallpaper.
-     *
-     * @return The desired minimum height of the wallpaper.
-     */
-    @SuppressLint("MissingPermission")
-    private int getDesiredMinimumHeight() {
-        WallpaperManager wm = WallpaperManager.getInstance(context);
-        return wm.getDesiredMinimumHeight();
-    }
-
-    /**
-     * Gets the desired minimum width for the device wallpaper.
-     *
-     * @return The desired minimum width of the wallpaper.
-     */
-    @SuppressLint("MissingPermission")
-    private int getDesiredMinimumWidth() {
-        WallpaperManager wm = WallpaperManager.getInstance(context);
-        return wm.getDesiredMinimumWidth();
-    }
 }

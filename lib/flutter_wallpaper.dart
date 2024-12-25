@@ -81,18 +81,6 @@ class WallpaperManager {
   }
 
   //----------------------------------------------------------------------------
-  // Clear Wallpaper
-  //----------------------------------------------------------------------------
-
-  /// Clears the current wallpaper on the device.
-  ///
-  /// Returns `true` if the wallpaper is cleared successfully, `false` otherwise.
-  static Future<bool> clearWallpaper() async {
-    final bool result = await _channel.invokeMethod('clearWallpaper');
-    return result;
-  }
-
-  //----------------------------------------------------------------------------
   // Get Wallpaper Height
   //----------------------------------------------------------------------------
 

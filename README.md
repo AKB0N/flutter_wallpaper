@@ -10,7 +10,6 @@ This plugin provides a simple and efficient way to set, download, clear, and ret
 ## Features
 e path.
 -   **Set Wallpaper from URL:** Download an image from a URL and set i
--   **Set Wallpaper from File:** Set a wallpaper from a local filt as wallpaper.
 -   **Download Wallpaper:** Download an image from a URL and save it to the device's gallery.
 -   **Clear Wallpaper:** Remove the current device wallpaper.
 -   **Get Wallpaper Dimensions:** Retrieve the height and width of an image from a URL.
@@ -149,11 +148,15 @@ The following constants are available within the `WallpaperManager` class:
 This plugin relies on the following permissions:
 
 -   **Android:**
-  -   `android.permission.SET_WALLPAPER` (for setting wallpapers)
-  -   `android.permission.READ_EXTERNAL_STORAGE` (for accessing local files)
-  -   `android.permission.WRITE_EXTERNAL_STORAGE` (for downloading images)
+  -   `<uses-permission
+        android:name="android.permission.SET_WALLPAPER"/>` (for setting wallpapers)
+  -   `<uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29"/>` (for downloading images)
+  - 
 -   **iOS:**
-  -   This plugin works on iOS 16+, but it's restricted to specific use cases, check the iOS Platform notes.
+  -   **Setting Wallpaper:** Due to Apple's security restrictions, programmatically setting the wallpaper on iOS is **not supported**. This plugin cannot change the home screen or the lock screen wallpaper on iOS.
+  -   **Downloading Wallpapers:** Downloading and saving Wallpapers to the photo gallery is fully supported on iOS using this package.
   -   Permission for saving an image to gallery is required: add this to `ios/Runner/Info.plist`
        ```xml
        <key>NSPhotoLibraryAddUsageDescription</key>
@@ -164,9 +167,7 @@ This plugin relies on the following permissions:
 
 -   **Android:** This plugin works seamlessly on all supported Android versions.
 -   **iOS:**
-  -   **Setting Wallpaper:** Setting a wallpaper programmatically on iOS is limited due to Apple's security policies. This plugin works on iOS 16+, and it may not work in all scenarios, and will be able to change only the lockscreen.
-  -   **Clearing Wallpaper:** Clearing the wallpaper is currently not supported on iOS.
-  -   **Saving to Gallery**: Saving image to photo gallery is supported by the package `image_gallery_saver`.
+  -   **Downloading Wallpapers:** Downloading and saving Wallpapers to the photo gallery is fully supported on iOS using this package.
 
 ## Contributing
 

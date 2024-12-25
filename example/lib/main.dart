@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
 
   /// The URL of the wallpaper image to be displayed and used.
   String imageURL =
-      "https://raw.githubusercontent.com/AKB0N/Mo-Salah-Wallpapers/refs/heads/master/pixel/1.png";
+      "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1msMpC.img";
 
   //----------------------------------------------------------------------------
   // Initialization
@@ -113,8 +113,10 @@ class _MyAppState extends State<MyApp> {
       String url = imageURL;
       int location = WallpaperManager.BOTH_SCREEN;
       var file = await DefaultCacheManager().getSingleFile(url);
-      final bool result =
-          await WallpaperManager.setWallpaperFromFile(file.path, location);
+      final bool result = await WallpaperManager.setWallpaperFromFile(
+        file.path,
+        location,
+      );
       print(result);
     } on PlatformException {}
   }
@@ -157,7 +159,10 @@ class _MyAppState extends State<MyApp> {
               TextButton(
                   onPressed: () => {
                         WallpaperManager.downloadWallpaper(
-                            imageURL, 'test', 100)
+                          imageURL,
+                          'test',
+                          100,
+                        )
                       },
                   child: Text("Download Wallpaper")),
               SizedBox(

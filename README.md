@@ -147,14 +147,14 @@ The following constants are available within the `WallpaperManager` class:
 
 This plugin relies on the following permissions:
 
--   **Android:**
+  **Android:**
   -   `<uses-permission
         android:name="android.permission.SET_WALLPAPER"/>` (for setting wallpapers)
   -   `<uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="29"/>` (for downloading images)
-  - 
--   **iOS:**
+
+  **iOS:**
   -   **Setting Wallpaper:** Due to Apple's security restrictions, programmatically setting the wallpaper on iOS is **not supported**. This plugin cannot change the home screen or the lock screen wallpaper on iOS.
   -   **Downloading Wallpapers:** Downloading and saving Wallpapers to the photo gallery is fully supported on iOS using this package.
   -   Permission for saving an image to gallery is required: add this to `ios/Runner/Info.plist`
@@ -165,8 +165,8 @@ This plugin relies on the following permissions:
 
 ## Platform Notes
 
--   **Android:** This plugin works seamlessly on all supported Android versions.
--   **iOS:**
+   **Android:** This plugin works seamlessly on all supported Android versions.
+   **iOS:**
   -   **Downloading Wallpapers:** Downloading and saving Wallpapers to the photo gallery is fully supported on iOS using this package.
 
 ## Contributing

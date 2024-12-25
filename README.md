@@ -166,6 +166,7 @@ This plugin relies on the following permissions:
 ## Platform Notes
 
    **Android:** This plugin works seamlessly on all supported Android versions.
+   
    **iOS:**
   -   **Downloading Wallpapers:** Downloading and saving Wallpapers to the photo gallery is fully supported on iOS using this package.
 

@@ -52,6 +52,16 @@ class _MyAppState extends State<MyApp> {
     initAppState();
   }
 
+  void clearWallpaper() async {
+    bool success = await WallpaperManager.clearWallpaper();
+
+    if (success) {
+      print('Wallpaper cleared successfully!');
+    } else {
+      print('Failed to clear wallpaper.');
+    }
+  }
+
   //----------------------------------------------------------------------------
   // Initial App State Setup
   //----------------------------------------------------------------------------
@@ -147,6 +157,9 @@ class _MyAppState extends State<MyApp> {
                         )
                       },
                   child: Text("Download Wallpaper")),
+              TextButton(
+                  onPressed: () => {clearWallpaper()},
+                  child: Text("Clear Wallpaper")),
               SizedBox(
                 height: 10,
               ),

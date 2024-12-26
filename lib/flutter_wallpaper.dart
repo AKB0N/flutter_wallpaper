@@ -1,10 +1,10 @@
 import 'dart:async';
+import 'dart:io';
 import 'dart:math';
 
 import 'package:flutter/services.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_cache_manager/file.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 
@@ -129,7 +129,7 @@ class WallpaperManager {
     } on Exception catch (err) {
       debugPrint(
           '$err,WallpapersSelected: Wallpaper will reload after Connection return.');
-      return Future.value(null);
+      throw Exception("Could not retrieve image height: $err");
     }
   }
 
@@ -150,7 +150,7 @@ class WallpaperManager {
     } on Exception catch (err) {
       debugPrint(
           '$err,WallpapersSelected: Wallpaper will reload after Connection return.');
-      return Future.value(null);
+      throw Exception("Could not retrieve image width: $err");
     }
   }
 
@@ -177,7 +177,7 @@ class WallpaperManager {
     } on Exception catch (err) {
       debugPrint(
           '$err,WallpapersSelected: Wallpaper will reload after Connection return.');
-      return Future.value(null);
+      throw Exception("Could not retrieve image size: $err");
     }
   }
 }

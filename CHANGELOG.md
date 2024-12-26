@@ -1,3 +1,6 @@
+## 0.0.3
+* fix README.md
+
 ## 0.0.2
 * feat: Update dependencies and enhance error handling
 - Updated `flutter_cache_manager` to version `3.4.1`.

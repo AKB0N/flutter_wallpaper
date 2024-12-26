@@ -24,7 +24,7 @@ Add `flutter_wallpaper` as a dependency in your `pubspec.yaml` file:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_wallpaper: ^0.0.2
+  flutter_wallpaper: ^0.0.3
 ```
 
 Then, run `flutter pub get` in your terminal.

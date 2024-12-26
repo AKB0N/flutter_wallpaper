@@ -8,7 +8,7 @@ A Flutter plugin for managing device wallpapers.
 This plugin provides a simple and efficient way to set, download, clear, and retrieve information about device wallpapers in your Flutter applications. It supports setting wallpapers for the home screen, lock screen, or both.
 
 ## Features
-e path.
+
 -   **Set Wallpaper from URL:** Download an image from a URL and set i
 -   **Download Wallpaper:** Download an image from a URL and save it to the device's gallery.
 -   **Clear Wallpaper:** Remove the current device wallpaper.

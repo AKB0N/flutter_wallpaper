@@ -1,5 +1,10 @@
+## 0.0.5
+* Remove cached_network_image dependency
+- Removed `cached_network_image` from `pubspec.yaml` dependencies.
+- Removed unused dependency from the project.
+
 ## 0.0.4
-* feat: Update example app and refactor wallpaper management
+* Update example app and refactor wallpaper management
 - Updated the example app to display and fetch wallpaper details, such as height, width, and size.
 - Refactored wallpaper management constants to use camelCase: `homeScreen`, `lockScreen`, and `bothScreen`.
 - Refactored code to use debugPrint.
@@ -10,7 +15,7 @@
 * fix README.md
 
 ## 0.0.2
-* feat: Update dependencies and enhance error handling
+* Update dependencies and enhance error handling
 - Updated `flutter_cache_manager` to version `3.4.1`.
 - Updated `cached_network_image` to version `3.4.1`.
 - Updated `image_gallery_saver` to version `2.0.3`.

@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1619878-e6a1-4090-8972-b7bef27c2b51" name="Changes" comment="feat: Add clear wallpaper functionality to example app&#10;&#10;- Added the ability to clear the wallpaper using the `clearWallpaper` method.&#10;- Updated the example app to include a &quot;Clear Wallpaper&quot; button.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/flutter_wallpaper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutter_wallpaper.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    <list default="true" id="a1619878-e6a1-4090-8972-b7bef27c2b51" name="Changes" comment="feat: Update dependencies and enhance error handling&#10;&#10;- Updated `flutter_cache_manager` to version `3.4.1`.&#10;- Updated `cached_network_image` to version `3.4.1`.&#10;- Updated `image_gallery_saver` to version `2.0.3`.&#10;- Improved error handling for `getWallPaperHeight`, `getWallPaperWidth`, and `getWallPaperSize` methods to throw exceptions when encountering issues instead of returning null.">
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735165816620</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: Update dependencies and enhance error handling&#10;&#10;- Updated `flutter_cache_manager` to version `3.4.1`.&#10;- Updated `cached_network_image` to version `3.4.1`.&#10;- Updated `image_gallery_saver` to version `2.0.3`.&#10;- Improved error handling for `getWallPaperHeight`, `getWallPaperWidth`, and `getWallPaperSize` methods to throw exceptions when encountering issues instead of returning null.">
+      <option name="closed" value="true" />
+      <created>1735221569048</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735221569048</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -144,6 +147,7 @@
     <MESSAGE value="feat: Add set wallpaper from URL functionality&#10;&#10;- Added the ability to set a wallpaper directly from a URL.&#10;- Implemented `setWallpaper` method to download and set the wallpaper.&#10;- Updated the example app to demonstrate the new `setWallpaper` method.&#10;- Updated the README file to describe the new functionality." />
     <MESSAGE value="feat: Add set wallpaper from URL and update permissions&#10;&#10;- Added the ability to set a wallpaper directly from a URL.&#10;- Updated Android permissions: removed `READ_EXTERNAL_STORAGE` and specified `maxSdkVersion` for `WRITE_EXTERNAL_STORAGE`.&#10;- Updated iOS notes to clarify wallpaper setting limitations and confirm gallery download support.&#10;- Updated features list: removed set wallpaper from File" />
     <MESSAGE value="feat: Add clear wallpaper functionality to example app&#10;&#10;- Added the ability to clear the wallpaper using the `clearWallpaper` method.&#10;- Updated the example app to include a &quot;Clear Wallpaper&quot; button." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add clear wallpaper functionality to example app&#10;&#10;- Added the ability to clear the wallpaper using the `clearWallpaper` method.&#10;- Updated the example app to include a &quot;Clear Wallpaper&quot; button." />
+    <MESSAGE value="feat: Update dependencies and enhance error handling&#10;&#10;- Updated `flutter_cache_manager` to version `3.4.1`.&#10;- Updated `cached_network_image` to version `3.4.1`.&#10;- Updated `image_gallery_saver` to version `2.0.3`.&#10;- Improved error handling for `getWallPaperHeight`, `getWallPaperWidth`, and `getWallPaperSize` methods to throw exceptions when encountering issues instead of returning null." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Update dependencies and enhance error handling&#10;&#10;- Updated `flutter_cache_manager` to version `3.4.1`.&#10;- Updated `cached_network_image` to version `3.4.1`.&#10;- Updated `image_gallery_saver` to version `2.0.3`.&#10;- Improved error handling for `getWallPaperHeight`, `getWallPaperWidth`, and `getWallPaperSize` methods to throw exceptions when encountering issues instead of returning null." />
   </component>
 </project>

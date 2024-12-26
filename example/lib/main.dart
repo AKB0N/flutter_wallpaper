@@ -5,22 +5,24 @@ import 'package:flutter_wallpaper/flutter_wallpaper.dart';
 
 /// The main entry point of the application.
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 /// The root widget of the application.
 ///
 /// This widget is stateful and manages the application's UI and state.
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
-  _MyAppState createState() => _MyAppState();
+  MyAppState createState() => MyAppState();
 }
 
 /// The state class for the `MyApp` widget.
 ///
 /// This class holds the mutable state for the `MyApp` widget and provides
 /// methods to initialize, update, and interact with the UI.
-class _MyAppState extends State<MyApp> {
+class MyAppState extends State<MyApp> {
   //----------------------------------------------------------------------------
   // State Variables
   //----------------------------------------------------------------------------
@@ -29,14 +31,14 @@ class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
 
   /// Stores the height and width of the wallpaper image.
-  String __heightWidth = "Unknown";
+  String __heightWidth = 'Unknown';
 
   /// Stores the size of the wallpaper image as a human-readable string.
-  String __size = "Unknown";
+  String __size = 'Unknown';
 
   /// The URL of the wallpaper image to be displayed and used.
   String imageURL =
-      "https://raw.githubusercontent.com/AKB0N/Mo-Salah-Wallpapers/refs/heads/master/pixel/1.png";
+      'https://raw.githubusercontent.com/AKB0N/Mo-Salah-Wallpapers/refs/heads/master/pixel/1.png';
 
   //----------------------------------------------------------------------------
   // Initialization
@@ -56,9 +58,9 @@ class _MyAppState extends State<MyApp> {
     bool success = await WallpaperManager.clearWallpaper();
 
     if (success) {
-      print('Wallpaper cleared successfully!');
+      debugPrint('Wallpaper cleared successfully!');
     } else {
-      print('Failed to clear wallpaper.');
+      debugPrint('Failed to clear wallpaper.');
     }
   }
 
@@ -73,8 +75,8 @@ class _MyAppState extends State<MyApp> {
   /// default values for the state variables in case of exceptions.
   Future<void> initAppState() async {
     String platformVersion;
-    String _heightWidth;
-    String _size;
+    String heightWidth;
+    String size;
 
     // Fetch platform version
     try {
@@ -86,24 +88,23 @@ class _MyAppState extends State<MyApp> {
 
     // Fetch image height, width, and size
     try {
-      int height = await WallpaperManager.getWallpaperHeight(imageURL);
-      int width = await WallpaperManager.getWallpaperWidth(imageURL);
-      String size = await WallpaperManager.getWallpaperSize(imageURL);
+      int getHeight = await WallpaperManager.getWallpaperHeight(imageURL);
+      int getWidth = await WallpaperManager.getWallpaperWidth(imageURL);
+      String getSize = await WallpaperManager.getWallpaperSize(imageURL);
 
-      _size = "Size = " + size.toString();
-      _heightWidth =
-          "Width = " + width.toString() + " Height = " + height.toString();
+      size = 'Size = $getSize';
+      heightWidth = 'Width = $getWidth Height = $getHeight';
     } on PlatformException {
-      _size = "Failed to get Size";
-      _heightWidth = "Failed to get Height and Width";
+      size = 'Failed to get Size';
+      heightWidth = 'Failed to get Height and Width';
     }
 
     // Update state if the widget is still mounted.
     if (!mounted) return;
 
     setState(() {
-      __size = _size;
-      __heightWidth = _heightWidth;
+      __size = size;
+      __heightWidth = heightWidth;
       _platformVersion = platformVersion;
     });
   }
@@ -132,22 +133,22 @@ class _MyAppState extends State<MyApp> {
             children: [
               Image.network(imageURL),
               Text('Running on: $_platformVersion\n'),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Text('$__heightWidth\n'),
               Text('$__size\n'),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               TextButton(
                   onPressed: () => {
                         WallpaperManager.setWallpaper(
                           imageURL,
-                          WallpaperManager.BOTH_SCREEN,
+                          WallpaperManager.bothScreen,
                         )
                       },
-                  child: Text("Set Wallpaper")),
+                  child: const Text('Set Wallpaper')),
               TextButton(
                   onPressed: () => {
                         WallpaperManager.downloadWallpaper(
@@ -156,11 +157,11 @@ class _MyAppState extends State<MyApp> {
                           100,
                         )
                       },
-                  child: Text("Download Wallpaper")),
+                  child: const Text('Download Wallpaper')),
               TextButton(
                   onPressed: () => {clearWallpaper()},
-                  child: Text("Clear Wallpaper")),
-              SizedBox(
+                  child: const Text('Clear Wallpaper')),
+              const SizedBox(
                 height: 10,
               ),
             ],

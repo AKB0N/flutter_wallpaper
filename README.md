@@ -24,7 +24,7 @@ Add `flutter_wallpaper` as a dependency in your `pubspec.yaml` file:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_wallpaper: ^0.0.3
+  flutter_wallpaper: ^0.0.4
 ```
 
 Then, run `flutter pub get` in your terminal.
@@ -46,7 +46,7 @@ import 'package:flutter_wallpaper/flutter_wallpaper.dart';
 
 void setWallpaperFromUrl() async {
   String imageUrl = 'https://raw.githubusercontent.com/AKB0N/Mo-Salah-Wallpapers/refs/heads/master/pixel/1.png'; // Replace with your image URL
-  int wallpaperLocation = WallpaperManager.BOTH_SCREEN; // Use HOME_SCREEN, LOCK_SCREEN, or BOTH_SCREEN
+  int wallpaperLocation = WallpaperManager.bothScreen; // Use homeScreen, lockScreen, or bothScreen
 
   await WallpaperManager.setWallpaper(imageUrl, wallpaperLocation);
 }
@@ -139,9 +139,9 @@ void getWallpaperSize() async {
 
 The following constants are available within the `WallpaperManager` class:
 
--   `WallpaperManager.HOME_SCREEN`: Represents the home screen wallpaper location.
--   `WallpaperManager.LOCK_SCREEN`: Represents the lock screen wallpaper location.
--   `WallpaperManager.BOTH_SCREEN`: Represents both the home and lock screen wallpaper locations.
+-   `WallpaperManager.homeScreen`: Represents the home screen wallpaper location.
+-   `WallpaperManager.lockScreen`: Represents the lock screen wallpaper location.
+-   `WallpaperManager.bothScreen`: Represents both the home and lock screen wallpaper locations.
 
 ## Permissions
 

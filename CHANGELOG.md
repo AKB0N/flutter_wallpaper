@@ -1,3 +1,11 @@
+## 0.0.4
+* feat: Update example app and refactor wallpaper management
+- Updated the example app to display and fetch wallpaper details, such as height, width, and size.
+- Refactored wallpaper management constants to use camelCase: `homeScreen`, `lockScreen`, and `bothScreen`.
+- Refactored code to use debugPrint.
+- Added error handling for wallpaper operations.
+- Added error message if getting the platform version fails.
+
 ## 0.0.3
 * fix README.md
 

@@ -18,17 +18,16 @@ class WallpaperManager {
   //----------------------------------------------------------------------------
 
   /// Method channel used for communication with platform-specific code.
-  static const MethodChannel _channel =
-      const MethodChannel('flutter_wallpaper');
+  static const MethodChannel _channel = MethodChannel('flutter_wallpaper');
 
   /// Constant representing the home screen wallpaper location.
-  static int HOME_SCREEN = 1;
+  static int homeScreen = 1;
 
   /// Constant representing the lock screen wallpaper location.
-  static int LOCK_SCREEN = 2;
+  static int lockScreen = 2;
 
   /// Constant representing both home and lock screen wallpaper locations.
-  static int BOTH_SCREEN = 3;
+  static int bothScreen = 3;
 
   //----------------------------------------------------------------------------
   // Platform Version Retrieval
@@ -76,8 +75,10 @@ class WallpaperManager {
         file.path,
         location,
       );
-      print(result);
-    } on PlatformException {}
+      debugPrint(result.toString());
+    } on PlatformException {
+      throw 'Failed to get platform version.';
+    }
   }
 
   //----------------------------------------------------------------------------
@@ -129,7 +130,7 @@ class WallpaperManager {
     } on Exception catch (err) {
       debugPrint(
           '$err,WallpapersSelected: Wallpaper will reload after Connection return.');
-      throw Exception("Could not retrieve image height: $err");
+      throw Exception('Could not retrieve image height: $err');
     }
   }
 
@@ -150,7 +151,7 @@ class WallpaperManager {
     } on Exception catch (err) {
       debugPrint(
           '$err,WallpapersSelected: Wallpaper will reload after Connection return.');
-      throw Exception("Could not retrieve image width: $err");
+      throw Exception('Could not retrieve image width: $err');
     }
   }
 
@@ -177,7 +178,7 @@ class WallpaperManager {
     } on Exception catch (err) {
       debugPrint(
           '$err,WallpapersSelected: Wallpaper will reload after Connection return.');
-      throw Exception("Could not retrieve image size: $err");
+      throw Exception('Could not retrieve image size: $err');
     }
   }
 }

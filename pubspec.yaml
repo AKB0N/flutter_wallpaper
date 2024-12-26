@@ -1,6 +1,6 @@
 name: flutter_wallpaper
 description: A Flutter plugin for managing device wallpapers on Android and iOS.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/akb0n/flutter_wallpaper
 
 environment:
@@ -20,3 +20,6 @@ flutter:
       android:
         package: com.akbon.flutter_wallpaper
         pluginClass: FlutterWallpaperPlugin
+
+
+

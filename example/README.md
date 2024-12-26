@@ -7,7 +7,7 @@ A flutter plugin to set wallpaper on your android device. It support Home Screen
 Simply install latest version of flutter_wallpaper and use the following code to set the wallpaper
 
 ```
-int location = WallpaperManager.BOTH_SCREEN; //can be Home/Lock Screen
+int location = WallpaperManager.bothScreen; //can be Home/Lock Screen
 bool result = await WallpaperManager.setWallpaperFromFile(path, location); //provide image path
 
 ```

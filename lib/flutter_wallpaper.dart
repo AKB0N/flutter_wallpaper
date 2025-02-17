@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:image_gallery_saver_plus/image_gallery_saver_plus.dart';
 
 /// A Flutter plugin for managing device wallpapers.
 ///
@@ -94,7 +94,7 @@ class WallpaperManager {
       wallpaperUrl, wallpaperName, quality) async {
     File file = await DefaultCacheManager().getSingleFile(wallpaperUrl);
     Uint8List bytes = file.readAsBytesSync();
-    await ImageGallerySaver.saveImage(
+    await ImageGallerySaverPlus.saveImage(
       bytes,
       quality: quality,
       name: wallpaperName,

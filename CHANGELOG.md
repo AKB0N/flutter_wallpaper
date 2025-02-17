@@ -1,3 +1,7 @@
+## 0.0.6
+* Updated `image_gallery_saver` to `image_gallery_saver_plus` version `3.0.5`.
+- Replaced `ImageGallerySaver.saveImage` with `ImageGallerySaverPlus.saveImage` in `flutter_wallpaper.dart`.
+
 ## 0.0.5
 * Remove cached_network_image dependency
 - Removed `cached_network_image` from `pubspec.yaml` dependencies.

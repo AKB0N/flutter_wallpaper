@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1619878-e6a1-4090-8972-b7bef27c2b51" name="Changes" comment="feat: Update example app and refactor wallpaper management&#10;&#10;- Updated the example app to display and fetch wallpaper details, such as height, width, and size.&#10;- Refactored wallpaper management constants to use camelCase: `homeScreen`, `lockScreen`, and `bothScreen`.&#10;- Refactored code to use debugPrint.&#10;- Added error handling for wallpaper operations.&#10;- Added error message if getting the platform version fails.">
+    <list default="true" id="a1619878-e6a1-4090-8972-b7bef27c2b51" name="Changes" comment="Remove cached_network_image dependency&#10;&#10;- Removed `cached_network_image` from `pubspec.yaml` dependencies.&#10;- Removed unused dependency from the project.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,23 +42,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Flutter.main.dart.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "io.flutter.reload.alreadyRun": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/work/Projects/flutter_wallpaper",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/work/Projects/flutter_wallpaper&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\work\Projects\flutter_wallpaper" />
@@ -178,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735223192731</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Remove cached_network_image dependency&#10;&#10;- Removed `cached_network_image` from `pubspec.yaml` dependencies.&#10;- Removed unused dependency from the project.">
+      <option name="closed" value="true" />
+      <created>1735230051181</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1735230051181</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -191,6 +197,7 @@
     <MESSAGE value="&#10;feat: Update dependencies and enhance error handling&#10;&#10;- Updated `flutter_cache_manager` to version `3.4.1`.&#10;- Updated `cached_network_image` to version `3.4.1`.&#10;- Updated `image_gallery_saver` to version `2.0.3`.&#10;- Improved error handling for `getWallPaperHeight`, `getWallPaperWidth`, and `getWallPaperSize` methods to throw exceptions when encountering issues instead of returning null.&#10;- Updated the version of the plugin to `0.0.2` in `pubspec.yaml`.&#10;- Updated `flutter_wallpaper` plugin version to `0.0.2` in the example's `pubspec.yaml`." />
     <MESSAGE value="fix README.md" />
     <MESSAGE value="feat: Update example app and refactor wallpaper management&#10;&#10;- Updated the example app to display and fetch wallpaper details, such as height, width, and size.&#10;- Refactored wallpaper management constants to use camelCase: `homeScreen`, `lockScreen`, and `bothScreen`.&#10;- Refactored code to use debugPrint.&#10;- Added error handling for wallpaper operations.&#10;- Added error message if getting the platform version fails." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Update example app and refactor wallpaper management&#10;&#10;- Updated the example app to display and fetch wallpaper details, such as height, width, and size.&#10;- Refactored wallpaper management constants to use camelCase: `homeScreen`, `lockScreen`, and `bothScreen`.&#10;- Refactored code to use debugPrint.&#10;- Added error handling for wallpaper operations.&#10;- Added error message if getting the platform version fails." />
+    <MESSAGE value="Remove cached_network_image dependency&#10;&#10;- Removed `cached_network_image` from `pubspec.yaml` dependencies.&#10;- Removed unused dependency from the project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove cached_network_image dependency&#10;&#10;- Removed `cached_network_image` from `pubspec.yaml` dependencies.&#10;- Removed unused dependency from the project." />
   </component>
 </project>

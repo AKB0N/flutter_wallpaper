@@ -1,3 +1,11 @@
+## 0.0.7
+* Fix for [Issue 1](https://github.com/AKB0N/flutter_wallpaper/issues/1).
+  In `image_gallery_saver`, build with GradleKotlinCompilerWorkAction.
+- Updated the Flutter SDK constraint to `>=3.7.2 <4.0.0`.
+- Updated the minimum Flutter version to `>=3.29.3`.
+- Replaced `image_gallery_saver_plus` with `flutter_image_gallery_saver` dependency, now at version `0.0.2`.
+- Adjusted `ndkVersion` to `"27.0.12077973"` in `example/android/app/build.gradle`.
+
 ## 0.0.6
 * Updated `image_gallery_saver` to `image_gallery_saver_plus` version `3.0.5`.
 - Replaced `ImageGallerySaver.saveImage` with `ImageGallerySaverPlus.saveImage` in `flutter_wallpaper.dart`.

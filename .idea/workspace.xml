@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1619878-e6a1-4090-8972-b7bef27c2b51" name="Changes" comment="Remove cached_network_image dependency&#10;&#10;- Removed `cached_network_image` from `pubspec.yaml` dependencies.&#10;- Removed unused dependency from the project.">
+    <list default="true" id="a1619878-e6a1-4090-8972-b7bef27c2b51" name="Changes" comment="Update `image_gallery_saver` dependency to `image_gallery_saver_plus`&#10;&#10;- Updated `image_gallery_saver` to `image_gallery_saver_plus` version `3.0.5`.&#10;- Replaced `ImageGallerySaver.saveImage` with `ImageGallerySaverPlus.saveImage` in `flutter_wallpaper.dart`.&#10;- Removed the `image_gallery_saver` dependency.">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flutter_wallpaper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutter_wallpaper.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +41,12 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/AKB0N/flutter_wallpaper.git&quot;,
-    &quot;accountId&quot;: &quot;6420198f-f115-46b6-a37f-c6adc7f7426b&quot;
+    &quot;accountId&quot;: &quot;8bbcec75-437b-4858-9763-fac4c682ae7e&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -56,7 +70,7 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/work/Projects/flutter_wallpaper&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Work/Projects/AKBON/flutter_wallpaper&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
@@ -184,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735230051181</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update `image_gallery_saver` dependency to `image_gallery_saver_plus`&#10;&#10;- Updated `image_gallery_saver` to `image_gallery_saver_plus` version `3.0.5`.&#10;- Replaced `ImageGallerySaver.saveImage` with `ImageGallerySaverPlus.saveImage` in `flutter_wallpaper.dart`.&#10;- Removed the `image_gallery_saver` dependency.">
+      <option name="closed" value="true" />
+      <created>1739827351947</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1739827351947</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -198,6 +220,7 @@
     <MESSAGE value="fix README.md" />
     <MESSAGE value="feat: Update example app and refactor wallpaper management&#10;&#10;- Updated the example app to display and fetch wallpaper details, such as height, width, and size.&#10;- Refactored wallpaper management constants to use camelCase: `homeScreen`, `lockScreen`, and `bothScreen`.&#10;- Refactored code to use debugPrint.&#10;- Added error handling for wallpaper operations.&#10;- Added error message if getting the platform version fails." />
     <MESSAGE value="Remove cached_network_image dependency&#10;&#10;- Removed `cached_network_image` from `pubspec.yaml` dependencies.&#10;- Removed unused dependency from the project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove cached_network_image dependency&#10;&#10;- Removed `cached_network_image` from `pubspec.yaml` dependencies.&#10;- Removed unused dependency from the project." />
+    <MESSAGE value="Update `image_gallery_saver` dependency to `image_gallery_saver_plus`&#10;&#10;- Updated `image_gallery_saver` to `image_gallery_saver_plus` version `3.0.5`.&#10;- Replaced `ImageGallerySaver.saveImage` with `ImageGallerySaverPlus.saveImage` in `flutter_wallpaper.dart`.&#10;- Removed the `image_gallery_saver` dependency." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update `image_gallery_saver` dependency to `image_gallery_saver_plus`&#10;&#10;- Updated `image_gallery_saver` to `image_gallery_saver_plus` version `3.0.5`.&#10;- Replaced `ImageGallerySaver.saveImage` with `ImageGallerySaverPlus.saveImage` in `flutter_wallpaper.dart`.&#10;- Removed the `image_gallery_saver` dependency." />
   </component>
 </project>

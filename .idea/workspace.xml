@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1619878-e6a1-4090-8972-b7bef27c2b51" name="Changes" comment="Update `image_gallery_saver` dependency to `image_gallery_saver_plus`&#10;&#10;- Updated `image_gallery_saver` to `image_gallery_saver_plus` version `3.0.5`.&#10;- Replaced `ImageGallerySaver.saveImage` with `ImageGallerySaverPlus.saveImage` in `flutter_wallpaper.dart`.&#10;- Removed the `image_gallery_saver` dependency.">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+    <list default="true" id="a1619878-e6a1-4090-8972-b7bef27c2b51" name="Changes" comment="## 0.0.7&#10;* Fix for [Issue 1](https://github.com/AKB0N/flutter_wallpaper/issues/1).&#10;  In `image_gallery_saver`, build with GradleKotlinCompilerWorkAction.&#10;- Updated the Flutter SDK constraint to `&gt;=3.7.2 &lt;4.0.0`.&#10;- Updated the minimum Flutter version to `&gt;=3.29.3`.&#10;- Replaced `image_gallery_saver_plus` with `flutter_image_gallery_saver` dependency, now at version `0.0.2`.&#10;- Adjusted `ndkVersion` to `&quot;27.0.12077973&quot;` in `example/android/app/build.gradle`.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/flutter_wallpaper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutter_wallpaper.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739827351947</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="## 0.0.7&#10;* Fix for [Issue 1](https://github.com/AKB0N/flutter_wallpaper/issues/1).&#10;  In `image_gallery_saver`, build with GradleKotlinCompilerWorkAction.&#10;- Updated the Flutter SDK constraint to `&gt;=3.7.2 &lt;4.0.0`.&#10;- Updated the minimum Flutter version to `&gt;=3.29.3`.&#10;- Replaced `image_gallery_saver_plus` with `flutter_image_gallery_saver` dependency, now at version `0.0.2`.&#10;- Adjusted `ndkVersion` to `&quot;27.0.12077973&quot;` in `example/android/app/build.gradle`.">
+      <option name="closed" value="true" />
+      <created>1745556807488</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1745556807488</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -221,6 +219,7 @@
     <MESSAGE value="feat: Update example app and refactor wallpaper management&#10;&#10;- Updated the example app to display and fetch wallpaper details, such as height, width, and size.&#10;- Refactored wallpaper management constants to use camelCase: `homeScreen`, `lockScreen`, and `bothScreen`.&#10;- Refactored code to use debugPrint.&#10;- Added error handling for wallpaper operations.&#10;- Added error message if getting the platform version fails." />
     <MESSAGE value="Remove cached_network_image dependency&#10;&#10;- Removed `cached_network_image` from `pubspec.yaml` dependencies.&#10;- Removed unused dependency from the project." />
     <MESSAGE value="Update `image_gallery_saver` dependency to `image_gallery_saver_plus`&#10;&#10;- Updated `image_gallery_saver` to `image_gallery_saver_plus` version `3.0.5`.&#10;- Replaced `ImageGallerySaver.saveImage` with `ImageGallerySaverPlus.saveImage` in `flutter_wallpaper.dart`.&#10;- Removed the `image_gallery_saver` dependency." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update `image_gallery_saver` dependency to `image_gallery_saver_plus`&#10;&#10;- Updated `image_gallery_saver` to `image_gallery_saver_plus` version `3.0.5`.&#10;- Replaced `ImageGallerySaver.saveImage` with `ImageGallerySaverPlus.saveImage` in `flutter_wallpaper.dart`.&#10;- Removed the `image_gallery_saver` dependency." />
+    <MESSAGE value="## 0.0.7&#10;* Fix for [Issue 1](https://github.com/AKB0N/flutter_wallpaper/issues/1).&#10;  In `image_gallery_saver`, build with GradleKotlinCompilerWorkAction.&#10;- Updated the Flutter SDK constraint to `&gt;=3.7.2 &lt;4.0.0`.&#10;- Updated the minimum Flutter version to `&gt;=3.29.3`.&#10;- Replaced `image_gallery_saver_plus` with `flutter_image_gallery_saver` dependency, now at version `0.0.2`.&#10;- Adjusted `ndkVersion` to `&quot;27.0.12077973&quot;` in `example/android/app/build.gradle`." />
+    <option name="LAST_COMMIT_MESSAGE" value="## 0.0.7&#10;* Fix for [Issue 1](https://github.com/AKB0N/flutter_wallpaper/issues/1).&#10;  In `image_gallery_saver`, build with GradleKotlinCompilerWorkAction.&#10;- Updated the Flutter SDK constraint to `&gt;=3.7.2 &lt;4.0.0`.&#10;- Updated the minimum Flutter version to `&gt;=3.29.3`.&#10;- Replaced `image_gallery_saver_plus` with `flutter_image_gallery_saver` dependency, now at version `0.0.2`.&#10;- Adjusted `ndkVersion` to `&quot;27.0.12077973&quot;` in `example/android/app/build.gradle`." />
   </component>
 </project>

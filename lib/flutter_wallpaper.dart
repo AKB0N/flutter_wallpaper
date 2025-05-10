@@ -53,9 +53,13 @@ class WallpaperManager {
   ///  (e.g., home screen, lock screen, both).
   /// Returns `true` if the wallpaper is set successfully, `false` otherwise.
   static Future<bool> setWallpaperFromFile(
-      String filePath, int wallpaperLocation) async {
-    final int result = await _channel.invokeMethod('setWallpaperFromFile',
-        {'filePath': filePath, 'wallpaperLocation': wallpaperLocation});
+    String filePath,
+    int wallpaperLocation,
+  ) async {
+    final int result = await _channel.invokeMethod('setWallpaperFromFile', {
+      'filePath': filePath,
+      'wallpaperLocation': wallpaperLocation,
+    });
     return result > 0 ? true : false;
   }
 
@@ -91,7 +95,10 @@ class WallpaperManager {
   /// The [wallpaperName] argument is the desired file name for the saved image.
   /// The [quality] argument specifies the quality of the saved image.
   static Future<void> downloadWallpaper(
-      wallpaperUrl, wallpaperName, quality) async {
+    wallpaperUrl,
+    wallpaperName,
+    quality,
+  ) async {
     File file = await DefaultCacheManager().getSingleFile(wallpaperUrl);
     Uint8List bytes = file.readAsBytesSync();
     await FlutterImageGallerySaver.saveImage(
@@ -129,7 +136,8 @@ class WallpaperManager {
       return height;
     } on Exception catch (err) {
       debugPrint(
-          '$err,WallpapersSelected: Wallpaper will reload after Connection return.');
+        '$err,WallpapersSelected: Wallpaper will reload after Connection return.',
+      );
       throw Exception('Could not retrieve image height: $err');
     }
   }
@@ -150,7 +158,8 @@ class WallpaperManager {
       return width;
     } on Exception catch (err) {
       debugPrint(
-          '$err,WallpapersSelected: Wallpaper will reload after Connection return.');
+        '$err,WallpapersSelected: Wallpaper will reload after Connection return.',
+      );
       throw Exception('Could not retrieve image width: $err');
     }
   }
@@ -177,7 +186,8 @@ class WallpaperManager {
       return wallpaperSize;
     } on Exception catch (err) {
       debugPrint(
-          '$err,WallpapersSelected: Wallpaper will reload after Connection return.');
+        '$err,WallpapersSelected: Wallpaper will reload after Connection return.',
+      );
       throw Exception('Could not retrieve image size: $err');
     }
   }

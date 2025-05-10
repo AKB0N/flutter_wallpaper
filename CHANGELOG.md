@@ -1,3 +1,6 @@
+## 0.0.8
+* Added commas for better formatting in method calls and parameters.
+
 ## 0.0.7
 * Fix for [Issue 1](https://github.com/AKB0N/flutter_wallpaper/issues/1).
   In `image_gallery_saver`, build with GradleKotlinCompilerWorkAction.
